@@ -1,2 +1,5 @@
 # onlineGameMarket
-Online video game store with the possibility of payment via cryptocurrency
+## backend
+folder /backend - backend server
+## frontend
+folder /frontend - frontend Vue server
