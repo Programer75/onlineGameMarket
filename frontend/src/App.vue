@@ -1,9 +1,9 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <MainHeader />
+  <main>
+    <router-view/>
+  </main>
+  <MainFooter />
 </template>
 
 <style lang="less">
@@ -13,9 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  padding: 0px;
 }
 
-nav {
+main {
   padding: 30px;
 
   a {
@@ -28,3 +29,23 @@ nav {
   }
 }
 </style>
+<script>
+import MainHeader from '@/components/MainHeader.vue'
+import MainFooter from '@/components/MainFooter.vue'
+
+export default {
+  name: 'App',
+  components: {
+    MainFooter,
+    MainHeader, 
+    // Define your components here
+  },
+  data() {
+    return {
+      data:{},
+            // Set this based on your authentication logic
+            // Add any data properties you need here
+        };
+    },
+}
+</script>
