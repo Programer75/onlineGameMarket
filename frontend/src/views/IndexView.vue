@@ -6,6 +6,16 @@
     </div>
 </template>
 
+<style lang="less" scoped>
+.content {
+    width: 95vw;
+    height: 800px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    padding: 0px
+}
+</style>
+
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'

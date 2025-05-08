@@ -3,7 +3,7 @@
         <div class="logo">
             <img class="logo-img" src="../assets/images/logo.png" alt="логотип">
             <div class="logo-text">
-                <h2>gaming</h2>
+                <h2>Online Market</h2>
             </div>
         </div>
         <nav>
@@ -19,7 +19,9 @@
                 <img class="account-logo" :src=user.avaSrc :alt=user.name id="log">
             </a>
             <div class="user-cart" id="userCart" v-if="user ?? null">
-                <img class="cart-icon" src="@/assets/icons/bag-handle-outline.svg" alt="">
+                <a href="/cart">
+                    <img class="cart-icon" src="@/assets/icons/bag-handle-outline.svg" alt="">
+                </a>
             </div>
             <div class="notifications">
                 <img class="notification-icon" src="@/assets/icons/notifications-outline.svg" alt="">
@@ -66,10 +68,12 @@
             font-size: 24px;
             display: flex;
             list-style-type: none;
+            padding-left: 0;
 
-            li {
+            li:not(:last-child){
                 margin-right: 20px;
-
+            }
+            li {
                 a {
                     text-decoration: none;
                     color: #343a40;
@@ -87,7 +91,7 @@
         height: 75px;
         display: flex;
         align-items: center;
-        justify-items: center;
+        justify-items: space-between;
         padding: 5px;
 
         a{
@@ -99,8 +103,8 @@
             border: 1px solid black;
             text-align: center;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             margin-right: 10px;
             margin-left: 10px;
         }
@@ -108,20 +112,22 @@
         .user-cart {
             color: #343a40;
             display: flex;
+            margin-right: 10px;
+            margin-left: 10px;
             .cart-icon {
                 width: 40px;
                 height: 40px;
-                margin-left: 10px;
             }
         }
         
         .notifications {
             color: #343a40;
             display: flex;
+            cursor: pointer;
+            
             .notification-icon {
                 width: 40px;
                 height: 40px;
-                margin-left: 10px;
             }
         }
     }
